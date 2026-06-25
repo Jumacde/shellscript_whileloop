@@ -2,7 +2,9 @@
 package "Application_Layer" {
 	component [main.sh] as main
 	component [inputnum.sh] as inputnum
-	main .> inputnum : << import function>>
+	component [logging_manager.sh] as logging	
+	main .> inputnum : << import function >>
+	main .> logging : << import function for logs >>
 
 }
 

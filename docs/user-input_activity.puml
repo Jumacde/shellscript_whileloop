@@ -2,9 +2,13 @@
 	class "main.sh" as main {
 		+main()
 }
+	class "logging_manager.sh" as logging {
+		+check_logdir()
+}
 	class "inputnum.sh" as inputnum {
 		+input_number()
 }
 
+main --> logging: import method and check log_dir
 main --> inputnum: import method
 @enduml

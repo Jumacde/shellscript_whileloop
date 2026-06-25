@@ -1,6 +1,7 @@
 @startuml
 start
 : run main.sh;
+: load logging function from logging_manager.sh;
 
 if (exit .env file?) then (yes)
 	: export variables using grep and xargs;
