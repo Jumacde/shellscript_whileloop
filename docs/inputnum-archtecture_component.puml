@@ -1,7 +1,7 @@
 @startuml
 package "Application_Layer" {
 	component [main.sh] as main
-	component [inputnum.sh] as inputnum
+	component [input_num.sh] as inputnum
 	component [logging_manager.sh] as logging	
 	main .> inputnum : << import function >>
 	main .> logging : << import function for logs >>

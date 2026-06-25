@@ -3,10 +3,10 @@
 		+main()
 }
 	class "logging_manager.sh" as logging {
-		+check_logdir()
+		+set_loggdir()
 }
-	class "inputnum.sh" as inputnum {
-		+input_number()
+	class "input_num.sh" as inputnum {
+		+input_digit()
 }
 
 main --> logging: import method and check log_dir
