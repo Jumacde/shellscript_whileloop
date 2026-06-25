@@ -1,0 +1,26 @@
+@startuml
+start
+: run main.sh;
+
+if (exit .env file?) then (yes)
+	: export variables using grep and xargs;
+else (no)
+	: show error message;
+	: exit sctipts(status1);
+	kill
+endif
+
+if ("ENV"="prod") then (yes)
+	: log_dir=prod_log;
+else(no)
+	: log_dir=test_log;
+endif
+
+if (do not exit log directories?) then (yes)
+	: create log dirctories;
+else(no)
+	: save logs direct;
+endif
+
+stop
+@enduml

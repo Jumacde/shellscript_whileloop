@@ -1,0 +1,10 @@
+@startuml
+	class "main.sh" as main {
+		+main()
+}
+	class "inputnum.sh" as inputnum {
+		+input_number()
+}
+
+main --> inputnum: import method
+@enduml
