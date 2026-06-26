@@ -12,16 +12,17 @@ else
     # if no .env file or log dir find end this script. 
     exit 1
 fi
+#declaration variable than global.
+log_dir=""
 
 get_logdir() {
-    local log_dir
     # log dir for prod-enviroment.
     # to execute by command "sudo ENV=prod /.main.sh"
-    if [ "${LOG_DIR}" = "prod" ]; then
+    if [ "${ENV}" = "prod" ]; then
         log_dir="${prod_log}"
     else
     # log dir for test-enviroment.
-        log_dir="$(test_log)"
+        log_dir="${test_log}"
     fi
     # create log directory for each enviroment if not exit.
     mkdir -p "$(dirname "$log_dir")"
