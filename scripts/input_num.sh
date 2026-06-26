@@ -10,6 +10,14 @@ inputnum() {
 	do 
 		echo "please input a digit. find a digit to end this programm."
 		read num
-		echo "you inputed: $num" | tee -a "$log_dir"	
+		echo "you inputed: $num" | tee -a "$log_dir"
+		case "$num" in
+			1) echo ": one";;
+			2) echo ": two";;
+			3) echo ": three";;
+			0) echo ": bye"
+				exit;;
+			*) echo ": others";;
+		esac
 	done
 }
