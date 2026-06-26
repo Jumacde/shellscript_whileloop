@@ -8,6 +8,7 @@ main() {
     # command: sudo ENV=prod ./main.sh -> prod_log
 	get_logdir
     # execute function and save result to log file.
-    inputnum >> "$log_dir"
+    #inputnum >> "$log_dir"
+    inputnum
 }
 main
