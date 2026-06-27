@@ -6,7 +6,7 @@
 		+set_loggdir()
 }
 	class "input_num.sh" as inputnum {
-		+input_digit()
+		+inputnum()
 }
 
 main --> logging: import method and check log_dir

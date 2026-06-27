@@ -11,6 +11,13 @@ else (no)
 	kill
 endif
 
+if (input 0) then (no)
+	: show message;
+else (yes)
+	: exit scripts;
+	kill
+endif
+
 if ("ENV"="prod") then (yes)
 	: log_dir=prod_log;
 else(no)
